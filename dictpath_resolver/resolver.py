@@ -2,9 +2,7 @@ import operator
 import re
 from typing import Any, Union, Callable
 
-
-class UnresolvableError(Exception):
-    """Path unresovlable on object"""
+from exceptions import UnresolvableError
 
 
 class DictPathResolver:

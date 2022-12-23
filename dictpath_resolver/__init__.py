@@ -14,4 +14,7 @@ Example:
     resolved value: "B"
 """
 
+from exceptions import *
+from resolver import *
+
 __version__ = "0.0.1"

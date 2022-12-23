@@ -4,7 +4,7 @@ Provides a simple syntax to access nested JSON-like object in python.
 
 The path should be a string, which consists of recurring patterns:
 
-    *Patern1Patern2Patern3......*
+    Patern1Patern2Patern3......
 
 There are 2 types of paterns:
 

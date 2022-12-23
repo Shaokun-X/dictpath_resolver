@@ -11,7 +11,8 @@ class DictPathResolver:
     The path should be a string, which consists of recurring patterns:
         Patern1Patern2Patern3......
     There are 2 types of paterns:
-        Dict member access patern: Starts with `.` then follows the member name. Member name must contain only /a-zA-Z\d\-_/.
+        Dict member access patern: Starts with `.` then follows the member name.
+        Member name must contain only /a-zA-Z\d\-_/.
         List item access patern: has an integer inside brackets `[]`.
     Paterns are evaluated first, then applied recursively to current child object,
     final value would be return when the list is exhausted.
@@ -50,7 +51,7 @@ class DictPathResolver:
         """Build a list of attribute accessors from the given path.
 
         The `PARSE_REGEX.findall` returns a list of tuples, the tuples are either of
-        shape ("string", "") or of ("", "int"), the accessors are built based on this fact."""
+        shape ("string", "") or of ("", "int")."""
 
         groups = self.PARSE_REGEX.findall(self.path)
         accessors = []
@@ -79,6 +80,6 @@ class DictPathResolver:
             print(current)
             try:
                 current = accessor(current)
-            except (KeyError, TypeError, IndexError) as e:
+            except (KeyError, TypeError, IndexError):
                 raise UnresolvableError("Path is unresolvable on the object")
         return current

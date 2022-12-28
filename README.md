@@ -1,12 +1,5 @@
 # dictpath_resolver
 
-[![PyPI Version][pypi-version]][pypi-url]
-[![PyPI Downloads][pypi-downloads]][pypi-url]
-
-[pypi-version]: https://img.shields.io/pypi/v/dictpath_resolver
-[pypi-url]: https://pypi.org/project/dictpath_resolver/
-[pypi-downloads]: https://img.shields.io/pypi/dm/dictpath_resolver
-
 Provides a simple syntax to access nested JSON-like object in python.
 
 ## Syntax
